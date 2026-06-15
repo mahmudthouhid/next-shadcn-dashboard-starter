@@ -8,6 +8,7 @@ import type { Metadata, Viewport } from 'next';
 import { cookies } from 'next/headers';
 import NextTopLoader from 'nextjs-toploader';
 import { NuqsAdapter } from 'nuqs/adapters/next/app';
+import { Analytics } from '@vercel/analytics/next';
 import '../styles/globals.css';
 
 const META_THEME_COLORS = {
@@ -67,6 +68,7 @@ export default async function RootLayout({ children }: { children: React.ReactNo
             </Providers>
           </ThemeProvider>
         </NuqsAdapter>
+        <Analytics />
       </body>
     </html>
   );
